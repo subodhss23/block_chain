@@ -23,5 +23,12 @@ Blockchain.prototype.createNewBlock = function(nonce, previousBlockHash, hash){
 			transaction: this.newTransactions,  	//all transaction in this block show be new transaction in a block
 			nonce: nonce,							//proof of work, number
 			hash: hash,								//data from new block
+			previousBlockHash: previousBlockHash    //data from previous block hashed into string
 		};
+
+		this.newTransactions = [];					//restarting for new block or clearning out
+		this.chain.push(newBlock);					//takes new block that we have created and pushes into this.chain, add to this.chain
+		
+
+		return newBlock;		
 }
