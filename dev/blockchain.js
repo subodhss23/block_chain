@@ -32,4 +32,3 @@ Blockchain.prototype.createNewBlock = function(nonce, previousBlockHash, hash){
 
 		return newBlock;		
 }
-module.exports = Blockchain;
